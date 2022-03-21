@@ -1,420 +1,188 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-<title>Assignment 1</title>
-
-<style>
-border:0;
-font:inherit;
-font-size:100%;
-margin:0;
-padding:0;
-vertical-align:baseline;
-}
-
-display:block;
-}
-
-html, body {background: #0B132B; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px; color: #50AAA9;}
-
-.clear {clear: both;}
-
-p {
-	font-size: 1em;
-	line-height: 1.4em;
-	margin-bottom: 20px;
-	color: #709CD1;
-}
-
-#cv {
-	width: 90%;
-	max-width: 800px;
-	background: #1C2541;
-	margin: 30px auto;
-}
-
-.mainDetails {
-	padding: 25px 35px;
-	border-bottom: 2px solid #5BC0BE;
-	background: #3A506B;
-}
-
-#name h1 {
-	font-size: 2.5em;
-	font-weight: 700;
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	margin-bottom: -6px;
-}
-
-#name h2 {
-	font-size: 2em;
-	margin-left: 2px;
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-}
-
-#mainArea {
-	padding: 0 40px;
-}
-
-#headshot {
-	width: 12.5%;
-	float: left;
-	margin-right: 30px;
-}
-
-#headshot img {
-	width: 100%;
-	height: auto;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-}
-
-#name {
-	float: left;
-}
-
-#contactDetails {
-	float: right;
-}
-
-#contactDetails ul {
-	list-style-type: none;
-	font-size: 0.9em;
-	margin-top: 2px;
-}
-
-#contactDetails ul li {
-	margin-bottom: 3px;
-	color: #0B132B;
-}
-
-#contactDetails ul li a, a[href^=tel] {
-	color: #0B132B;
-	text-decoration: none;
-	-webkit-transition: all .3s ease-in;
-	-moz-transition: all .3s ease-in;
-	-o-transition: all .3s ease-in;
-	-ms-transition: all .3s ease-in;
-	transition: all .3s ease-in;
-}
-
-#contactDetails ul li a:hover {
-	color: #6FFFE9;
-}
-
-
-section {
-	border-top: 1px solid #5BC0BE;
-	padding: 20px 0 0;
-}
-
-section:first-child {
-	border-top: 0;
-}
-
-section:last-child {
-	padding: 20px 0 10px;
-}
-
-.sectionTitle {
-	float: left;
-	width: 25%;
-}
-
-.sectionContent {
-	float: right;
-	width: 72.5%;
-}
-
-.sectionTitle h1 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-style: italic;
-	font-size: 1.5em;
-	color: #6FFFE9;
-}
-
-.sectionTitle img {
-	width: 100%;
-}
-
-.sectionContent h2 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
-	margin-bottom: -2px;
-}
-
-.sectionContent h3 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-style: italic;
-	font-size: 1.1em;
-	margin-bottom: -2px;
-}
-
-.sectionContent img {
-	border: 2px solid #50AAA9;
-}
-
-.subDetails {
-	font-size: 0.8em;
-	font-style: italic;
-	margin-bottom: 3px;
-}
-
-.keySkills {
-	list-style-type: none;
-	-moz-column-count:3;
-	-webkit-column-count:3;
-	column-count:3;
-	margin-bottom: 20px;
-	font-size: 1em;
-	color: #50AAA9;
-}
-
-.keySkills ul li {
-	margin-bottom: 3px;
-}
-
-@media all and (min-width: 602px) and (max-width: 800px) {
-	#headshot {
-		display: none;
-	}
-
-	.keySkills {
-	-moz-column-count:2;
-	-webkit-column-count:2;
-	column-count:2;
-	}
-}
-
-@media all and (max-width: 601px) {
-	#cv {
-		width: 95%;
-		margin: 10px auto;
-		min-width: 280px;
-	}
-
-	#headshot {
-		display: none;
-	}
-
-	#name, #contactDetails {
-		float: none;
-		width: 100%;
-		text-align: center;
-	}
-
-	.sectionTitle, .sectionContent {
-		float: none;
-		width: 100%;
-	}
-
-	.sectionTitle {
-		margin-left: -2px;
-		font-size: 1.25em;
-	}
-
-	.keySkills {
-		-moz-column-count:2;
-		-webkit-column-count:2;
-		column-count:2;
-	}
-}
-
-@media all and (max-width: 480px) {
-	.mainDetails {
-		padding: 15px 15px;
-	}
-
-	section {
-		padding: 15px 0 0;
-	}
-
-	#mainArea {
-		padding: 0 25px;
-	}
-
-
-	.keySkills {
-	-moz-column-count:1;
-	-webkit-column-count:1;
-	column-count:1;
-	}
-
-	#name h1 {
-		line-height: .8em;
-		margin-bottom: 4px;
-	}
-}
-
-@media print {
-    #cv {
-        width: 100%;
-    }
-}
-
-@-webkit-keyframes reset {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-@-webkit-keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	40% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@-moz-keyframes reset {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-@-moz-keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	40% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes reset {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	40% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-.instaFade {
-    -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 1.5s;
-    -webkit-animation-timing-function: ease-in;
-
-	-moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 1.5s;
-    -moz-animation-timing-function: ease-in;
-
-	animation-name: reset, fade-in;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in;
-}
-
-.quickFade {
-    -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 2.5s;
-    -webkit-animation-timing-function: ease-in;
-
-	-moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 2.5s;
-    -moz-animation-timing-function: ease-in;
-
-	animation-name: reset, fade-in;
-    animation-duration: 2.5s;
-    animation-timing-function: ease-in;
-}
-
-.delayOne {
-	-webkit-animation-delay: 0, .5s;
-	-moz-animation-delay: 0, .5s;
-	animation-delay: 0, .5s;
-}
-
-.delayTwo {
-	-webkit-animation-delay: 0, 1s;
-	-moz-animation-delay: 0, 1s;
-	animation-delay: 0, 1s;
-}
-
-.delayThree {
-	-webkit-animation-delay: 0, 1.5s;
-	-moz-animation-delay: 0, 1.5s;
-	animation-delay: 0, 1.5s;
-}
-
-.delayFour {
-	-webkit-animation-delay: 0, 2s;
-	-moz-animation-delay: 0, 2s;
-	animation-delay: 0, 2s;
-}
-
-.delayFive {
-	-webkit-animation-delay: 0, 2.5s;
-	-moz-animation-delay: 0, 2.5s;
-	animation-delay: 0, 2.5s;
-}
-</style>
-
-  </head>
-  <body>
-    <h>My IT Profile</h>
-    <p>Content about me...</p>
-
-  <h1>Personal Information</h1>
-    <p1>Name: (Yifan Yvon) Shen</p1>
-    <p2>Student Number: S3939815</p2>
-    <p3>Student Email Address: S3939815@student.rmit.edu.au</p3>
-    <p4>My name is Yifan Shen, Yvon is my English name. I am from Shanghai, an international metropolis located in the middle
-        of the eastern coastline of China. I have been in Melbourne for about three years. I’ve got my high school education
-        in Balwyn High School majoring in Software Development and Mathematics, including Specialist Maths, Maths Methods and
-        Further Maths. The major for further education that I pursue here in RMIT is Information Technology.
-    </p4>
-
-    <img src="person.jpg" alt="photo" width="200px">
-    <img src="person.jpg" alt="photo" width="200px">
-
-  </body>
+<html>
+<head>
+<title>(Yifan Yvon) Shen - ePortfolio</title>
+
+<meta name="viewport" content="width=device-width"/>
+<meta name="description" content="ePortfolio for Yifan Shen."/>
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body id="top">
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+		<div id="headshot" class="quickFade">
+			<img src="headshot.jpg" alt="Student Name" />
+		</div>
+
+		<div id="name">
+			<h1 class="quickFade delayTwo">Student Name</h1>
+			<h2 class="quickFade delayThree">ePortfolio</h2>
+		</div>
+
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li>#: s3939815</li>
+				<li>e: <a href="s3939815@student.rmit.edu.au" target="_blank">student@student.rmit.edu.au</a></li>
+				<li>w: <a href=" https://yvonef.github.io/My-Profile/">www.github.com/</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div id="mainArea" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Personal Information</h1>
+				</div>
+
+				<div class="sectionContent">
+					<p>My name is Yifan Shen, Yvon is my English name. I am from Shanghai, an international metropolis located in the middle of the eastern coastline of China. I have been in Melbourne for about three years. I’ve got my high school education in Balwyn High School majoring in Software Development and Mathematics, including Specialist Maths, Maths Methods and Further Maths. The major for further education that I pursue here in RMIT is Information Technology. In my leisure time, I have a great number of hobbies. Playing the piano can be one of them. The road of learning the piano has not been all smooth sailing. Because of my keen interest in piano in kindergarten, I started to learn to play the piano. Nevertheless, in the process of practicing, I felt tired since the variety of etudes, which was obviously not the same as my original intention of wanting to play the outstanding works of famous composers. I tried to give up, but with the encouragement of my parents, I gained motivation and I chose to face it bravely. Finally, I got great score in the tenth level of piano, which is also the highest level in China’s piano grade examination, when I was in Grade 6. Later, when I have songs that I want to play, including popular music I like, I can play them easily. I have also developed a good habit of “doing one thing, either don’t do it or do it to the extreme”. Of course, doing sports is also an integral part of my life. In my spare time, I love road-bike cycling. During the ride, I can not only relax my mind, exercise my body, but also enjoy the beautiful scenery along the way. I also enjoy playing tennis, basketball and badminton. Collecting things is also one of my favourite hobbies, ranging from sneakers, Pokémon cards, coins, stamps, etc. My most-liked thing to do on vocations is to travel. It is undoubtedly a fantastic thing to go and see where you want to go, photographing and discover the beauty of the earth. The place I most look forward to is Antarctica. For photography, for adventure, for icebergs, for wildlife, for another world…</p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Interest in IT</h1>
+				</div>
+
+				<div class="sectionContent">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor metus, interdum at scelerisque in, porta at lacus. Maecenas dapibus luctus cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Ideal Job</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Job Title</h2>
+					<h3>Description</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<h3>Skills I have</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<h3>Skills I Need</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<h3>Learning Plan</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+				</article>
+
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Key Skills</h1>
+			</div>
+
+			<div class="sectionContent">
+				<ul class="keySkills">
+					<li>A Key Skill</li>
+					<li>A Key Skill</li>
+					<li>A Key Skill</li>
+					<li>A Key Skill</li>
+					<li>A Key Skill</li>
+					<li>A Key Skill</li>
+					<li>A Key Skill</li>
+					<li>A Key Skill</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Personality Profile</h1>
+				<img src="gandalf.png" alt="Gandalf" />
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Myers Briggs Type Indicator</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+					<h3>Strengths</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<h3>Weaknesses</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<h3>Team Composition</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<p><img src="mbti_results.png" alt="MBTI Results" /></p>
+				</article>
+
+				<article>
+					<h2>Test Two</h2>
+					<p class="subDetails">Learning Preferences</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+				</article>
+
+				<article>
+					<h2>Test Three</h2>
+					<p class="subDetails">Big 5 Factors</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Project Idea</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Overview</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+				</article>
+
+				<article>
+					<h2>Motivation</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+				</article>
+
+				<article>
+					<h2>Description</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor metus, interdum at scelerisque in, porta at lacus. Maecenas dapibus luctus cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+				</article>
+
+				<article>
+					<h2>Tools and Technologies</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+				</article>
+
+				<article>
+					<h2>Skills Required</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+				</article>
+
+				<article>
+					<h2>Outcome</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+	</div>
+</div>
+</body>
 </html>
 
 
 
 
-
-
-
-
-<article class="all-personal-information">
-  <h1>Personal Information</h1>
-  <article class="personal-information">
-    <h2>Google Chrome</h2>
-    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
-  </article>
-  <article class="browser">
-    <h2>Mozilla Firefox</h2>
-    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-  </article>
-  <article class="browser">
-    <h2>Microsoft Edge</h2>
-    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
-  </article>
-</article>
+    <img src="person.jpg" alt="photo" width="200px">
+    <img src="person.jpg" alt="photo" width="200px">
