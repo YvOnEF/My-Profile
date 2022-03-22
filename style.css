@@ -81,11 +81,11 @@ p {
 
 #contactDetails ul li {
 	margin-bottom: 3px;
-	color: #0B132B;
+	color: #FAFAD2;
 }
 
 #contactDetails ul li a, a[href^=tel] {
-	color: #0B132B;
+	color: #FAFAD2;
 	text-decoration: none;
 	-webkit-transition: all .3s ease-in;
 	-moz-transition: all .3s ease-in;
@@ -163,7 +163,7 @@ section:last-child {
 	column-count:3;
 	margin-bottom: 20px;
 	font-size: 1em;
-	color: #50AAA9;
+	color: #000000;
 }
 
 .keySkills ul li {
